@@ -1,0 +1,84 @@
+Câu 1:
+#include <stdio.h>
+#include <conio.h>
+int main() {
+    int x;
+    printf("Nhap gia tri x: ");
+    scanf("%d", &x);
+
+    printf("x^2 = %d\n", x * x);
+    printf("x^3 = %d\n", x * x * x);
+    printf("x^4 = %d\n", x * x * x * x);
+}
+Câu 2:
+#include <stdio.h>
+#include <conio.h>
+int main() {
+    int x;
+    int y;
+    int z;
+
+    printf("Nhap ngay, thang, nam: ");
+    scanf("%d %d %d", &x, &y, &z);
+
+    printf("Hom nay la ngay: %02d/%02d/%04d", x, y, z);
+}
+Câu 3:
+#include <stdio.h>
+#include <conio.h>
+int main() {
+    int x;
+    int y;
+
+    printf("Nhap gia tri cua x va y: ");
+    scanf("%d %d", &x, &y);
+    printf(" x+y=%d\n x-y=%d\n x*y=%d\n x/y=%d\n", x+y, x-y, x*y, x/y);
+}
+Câu 4:
+#include <stdio.h>
+#include <conio.h>
+int main() {
+    float x;
+    printf("Nhap ban kinh hinh cau: ");
+    scanf("%f", &x);
+    printf("dien tich: %f%c ; the tich: %f%c", 4*x*x,227, (4/3)*x*x*x,227);
+}
+Câu 5:
+#include <stdio.h>
+#include <math.h>
+
+void GiaiPTBac2(float a, float b, float c)
+{
+    if (a == 0)
+        {if (b == 0)
+        {printf ("Phuong trinh vo nghiem\n");}
+          else {printf ("Phuong trinh co nghiem la: x = %.2f\n", -c/b);}
+        }
+    else
+    {
+        float Delta = b*b - 4*a*c;
+        if (Delta < 0)
+        {
+            printf ("Phuong trinh vo nghiem\n");
+        }
+        else if (Delta == 0)
+        {
+            printf ("Phuong trinh co nghiem x = %.2f\n", -b/(2*a));
+        }
+        else
+        {
+        float x1 = (-b + sqrt(Delta))/(2*a);
+        float x2 = (-b - sqrt(Delta))/(2*a);
+           printf ("Phuong trinh co 2 nghiem x1 = %.2f va x2 = %.2f\n", x1, x2);
+        }
+    }
+}
+
+int main()
+{
+ float a, b, c;
+ printf ("Nhap gia tri cua a, b, c: ");
+scanf ("%f %f %f", &a, &b, &c);
+GiaiPTBac2(a, b, c);
+return 0;
+}
