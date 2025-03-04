@@ -82,3 +82,53 @@ scanf ("%f %f %f", &a, &b, &c);
 GiaiPTBac2(a, b, c);
 return 0;
 }
+Câu 7:
+#include <stdio.h>
+#include <stdlib.h>
+
+void XepLoaiHS(float x)
+{
+    if (x < 5)
+        {printf ("Xep Loai Yeu");}
+    else if (7 <= x < 8)
+        {printf ("Xep Loai Kha");}
+    else if (5 <= x <7)
+        {printf ("Xep Loai Trung Binh");}
+    else if (8 <= x < 9)
+        {printf ("Xep Loai Gioi");}
+    else if (9 <= x <= 10)
+        {printf ("Xep Loai Xuat Sac");}
+}
+
+int main()
+{
+    float x;
+    printf("Nhap diem trung binh cua hoc sinh: ");
+    scanf ("%f", &x);
+    XepLoaiHS (x);
+    return 0;
+}
+Câu 9:
+#include <stdio.h>
+#include <stdlib.h>
+
+void NgayThang(int x)
+{
+    if (x == 1 || x == 3 || x == 5 || x == 7 || x == 8 || x == 10 || x == 12)
+        {printf ("Thang %d co 31 ngay", x);}
+    else if (x == 4 || x == 6 || x == 9 || x == 11)
+        {printf ("Thang %d co 30 ngay", x);}
+    else if (x == 2)
+        {printf ("Thang 2 chi co 28 hoac 29 ngay, tuy nam");}
+    else if (x < 1 || x > 12)
+        {printf ("Thang khong hop le");}
+}
+
+int main()
+{
+    int x;
+    printf("Nhap mot thang bat ky: ");
+    scanf ("%d", &x);
+    NgayThang (x);
+    return 0;
+}
