@@ -82,6 +82,28 @@ scanf ("%f %f %f", &a, &b, &c);
 GiaiPTBac2(a, b, c);
 return 0;
 }
+Câu 6:
+#include<stdio.h>
+#include<conio.h>
+int main()
+  {
+      float a, b, c, d, e, f;
+      printf("Ta co he phuong trinh:\n");
+      printf("ax + by = c\n");
+      printf("dx + ey = f\n");
+      printf("Nhap gia tri a, b, c: \n");
+      scanf("%f %f %f", &a, &b, &c);
+      printf("Nhap gia tri d, e, f: \n");
+      scanf("%f %f %f", &d, &e, &f);
+      float y = ((f*a-c*d)/(e*a-b*d));
+      float x = ((c-d*y)/a);
+      if (e*a == b*d || a == 0)
+      {
+          printf("He phuong trinh vo nghiem");
+      }
+      else {printf("Gia tri cua x va y la: %f va %f", x, y);}
+
+  }
 Câu 7:
 #include <stdio.h>
 #include <stdlib.h>
@@ -107,6 +129,41 @@ int main()
     scanf ("%f", &x);
     XepLoaiHS (x);
     return 0;
+}
+Câu 8:
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a, b, c;
+    printf("Nhap do dai 3 canh: a, b, c: \n");
+    scanf("%f %f %f", &a, &b, &c);
+    if (a + b > c && a + c > b && b + c > a)
+    {
+        if (a == b && b == c)
+        {
+            printf("Tam giac deu\n");
+        }
+        else if (a == b || a == c || b == c)
+        {
+            printf("Tam giac can\n");
+        }
+        else if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a)
+        {
+            printf("Tam giac vuong can\n");
+        }
+        else if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a)
+            printf("Tam giac vuong\n");
+        else
+        {
+            printf("Tam giac binh thuong\n");
+        }
+    }
+    float P = (a + b + c);
+    printf("Chu vi tam giac la %.1f\n", P);
+    float p = ((a+b+c)/2);
+    float S = sqrt(p*(p-a)*(p-b)*(p-c));
+    printf("Dien tich tam giac la %.1f", S);
 }
 Câu 9:
 #include <stdio.h>
