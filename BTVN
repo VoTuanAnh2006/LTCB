@@ -204,3 +204,143 @@ int main()
     }
     printf("Tong cua no la: %d\n", n);
 }
+Câu 2:
+#include<stdio.h>
+
+int KTSoNguyen(int a)
+{
+    if (a<=1)
+    {
+        return 0;
+    }
+    for (int i=2; i<a; i++)
+
+    {
+        if (a%i==0)
+            return 0;
+    }
+    return 1;
+}
+
+int main()
+{
+    int a;
+    printf("Nhap mot so bat ky ");
+    scanf("%d", &a);
+    if (KTSoNguyen(a)==0)
+    {
+        printf("%d khong phai so nguyen\n", a);
+    }
+    else
+    {
+        printf("%d la so nguyen tu\n", a);
+    }
+    return 0;
+}
+Câu 3:
+#include<stdio.h>
+
+int main()
+{
+    for(int i=1; i<=20; i++)
+    {
+        if(i%2==0)
+        {
+            printf("%d\t", i);
+        }
+    }
+    return 0;
+}
+Câu 4:
+#include<stdio.h>
+
+int main()
+{
+    int a=0;
+    for(int i=1; i<=100; i++)
+    {
+        if(i%2!=0)
+        {
+            a=a+i;
+        }
+    }
+    printf("Tong cac so le tu 1 den 100: %d", a);
+    return 0;
+}
+Câu 5:
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    printf("Nhap mot so n bat ky ");
+    scanf("%d", &n);
+    for(int i=1; i<=n; i++)
+    {
+        if(n%i==0)
+        {
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
+Câu 6.1:
+#include<stdio.h>
+int UocChung(int a, int b)
+{
+    int c=a;
+    while (c!=0)
+    {
+        if (a%c==0&&b%c==0)
+            break;
+        c--;
+    }
+    return c;
+}
+int BoiChung(int a, int b)
+{
+    int c=UocChung(a, b);
+    int d;
+    d=(a*b)/c;
+    return d;
+}
+int main()
+{
+    int a, b;
+    printf("Nhap 2 so bat ky: ");
+    scanf("%d %d", &a, &b);
+    printf("Uoc chung lon nhat cua %d va %d la %d\n", a, b, UocChung(a, b));
+    printf("Boi chung nho nhat cua %d va %d la %d\n", a, b, BoiChung(a, b));
+    return 0;
+}
+Câu 6.2:
+#include<stdio.h>
+int Uoc(int a)
+{
+    int c=1;
+    int d=0;
+    while (c<=a)
+    {
+        if (a%c==0)
+        {
+            d=d+c;
+        }
+        c++;
+    }
+    return d;
+}
+int main()
+{
+    int a;
+    printf("Nhap so bat ky: ");
+    scanf("%d", &a);
+    if(Uoc(a)==2*a)
+    {
+        printf("%d la so hoan hao", a);
+    }
+    else
+    {
+        printf("%d khong phai la so hoan hao", a);
+    }
+    return 0;
+}
